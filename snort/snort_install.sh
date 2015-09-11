@@ -68,6 +68,7 @@ function snort_install(){
 }
 
 function barnyard2_install(){
+	echo "..........Starting barnyard2 installarion........"
 	cd ${base_url}/src
 	tar -zxvf barnyard2-2-1.13.tar.gz > /dev/null 2>&1
 	cd barnyard2-2-1.13
@@ -84,6 +85,7 @@ function barnyard2_install(){
 }
 
 function pulledpork_install(){
+	echo "..........Starting pulledpork installation........."
 	cd ${base_url}/src/pulledpork
     sudo cp pulledpork.pl /usr/local/bin
 	sudo chmod a+x /usr/local/bin/pulledpork.pl
@@ -96,6 +98,7 @@ function pulledpork_install(){
 }
 
 function base_install(){
+	echo "...........Starting base installation............."
 	sudo pear install -f Image_Graph > /dev/null 2>&1
 	cd ${base_url}/src
 	tar -xvzf adodb518.tgz > /dev/null 2>&1
